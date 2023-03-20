@@ -30,13 +30,14 @@ public class Main {
             g2.drawString("hello world!", 20, 20); // x and y это отступы
             Point2D p1 = new Point2D.Double(70,70); // для орисовки точки
             Point2D p2 = new Point2D.Double(170, 170); // для орисовки точки
-            Line2D line2D = new Line2D.Float(p1,p2); // для прописовки линий и это координаты x1,y1,x2,y2 отвечают где рисовать линию
+            Line2D line2D = new Line2D.Double(p1,p2); // для прописовки линий и это координаты x1,y1,x2,y2 отвечают где рисовать линию
             g2.draw(line2D);
-            Ellipse2D el = new Ellipse2D.Double(70,70,170,170); // также можно нарисовать эллипс
-            g2.draw(el);
+            Ellipse2D el = new Ellipse2D.Double(); // также можно нарисовать эллипс
+            el.setFrameFromDiagonal(p1,p2);
             g2.setPaint(Color.red);
             g2.draw(el);
-            Rectangle2D r2 = new Rectangle2D.Double(70,70,170,170);
+            Rectangle2D r2 = new Rectangle2D.Double();
+            r2.setFrameFromDiagonal(p1, p2);
             g2.draw(r2);
             //g2.fill(el); // залить цвет
             // как можно выводить изображения?
