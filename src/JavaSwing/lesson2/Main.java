@@ -4,6 +4,8 @@ package JavaSwing.lesson2;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,8 +23,14 @@ public class Main {
             Font font = new Font("Yu Gothic Medium", Font.BOLD, 20);
             Graphics2D g2 = (Graphics2D)g; // вот этот метод
             g2.setFont(font);
-            g2.drawString("hello world!", 20, 20);
+            g2.drawString("hello world!", 20, 20); // x and y это отступы
+            Point2D p1 = new Point2D.Double(70,70); // для орисовки точки
+            Point2D p2 = new Point2D.Double(170, 170); // для орисовки точки
+
+            Line2D line2D = new Line2D.Float(70,70,190,190); // для прописовки линий и это координаты x1,y1,x2,y2 отвечают где рисовать линию
+            g2.draw(line2D);
         }
+
     }
 
     static JFrame getFrame() {
