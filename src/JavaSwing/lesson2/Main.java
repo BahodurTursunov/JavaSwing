@@ -27,7 +27,7 @@ public class Main {
             Point2D p1 = new Point2D.Double(70,70); // для орисовки точки
             Point2D p2 = new Point2D.Double(170, 170); // для орисовки точки
 
-            Line2D line2D = new Line2D.Float(70,70,190,190); // для прописовки линий и это координаты x1,y1,x2,y2 отвечают где рисовать линию
+            Line2D line2D = new Line2D.Float(p1,p2); // для прописовки линий и это координаты x1,y1,x2,y2 отвечают где рисовать линию
             g2.draw(line2D);
         }
 
